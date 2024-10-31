@@ -8,7 +8,6 @@ body {
     margin: 0;
     background: #424f6f;
 }
-
 #container {
     width: 400px;
     height: 400px;
@@ -16,19 +15,16 @@ body {
     box-sizing: border-box;
     background: #424f6f;
 }
-
 *:after,
-*::before {
+*:before {
     box-sizing: inherit;
 }
-
 #spooky {
     margin: 10% auto;
     width: 80%;
     height: 80%;
     animation: floaty 2s infinite;
 }
-
 #spooky #body {
     position: relative;
     margin: 50px auto 0;
@@ -38,9 +34,8 @@ body {
     border-top-left-radius: 90px;
     border-top-right-radius: 90px;
 }
-
 #spooky #body:before,
-#spooky #body::after  {
+#spooky #body:after {
     content: '';
     position: absolute;
     top: 130px;
@@ -49,17 +44,14 @@ body {
     height: 36px;
     border-radius: 50%;
     background: #f2fbf1;
-    animation: floaty .2s infinte;
+    animation: floaty .2s infinite;
 }
-
 #spooky #body:before {
     left: -18px;
 }
-
-#spooky #body:after{
+#spooky #body:after {
     right: -18px;
 }
-
 #spooky #body #eyes {
     display: flex;
     justify-content: space-between;
@@ -68,17 +60,15 @@ body {
     width: 90px;
     height: 20px;
 }
-
 #spooky #body #eyes:before,
 #spooky #body #eyes:after {
-    content: '';
+    content: ' ';
     display: block;
     width: 30px;
     height: 30px;
     background: #252c49;
     border-radius: 50%;
 }
-
 #spooky #body #mouth {
     background: #252c49;
     margin: 25px auto 0;
@@ -87,16 +77,14 @@ body {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
-
 #spooky #body #mouth:before {
-    content: '';
+    content: ' ';
     display: block;
     background: #fff;
     margin-left: 20px;
     width: 10px;
     height: 10px;
 }
-
 #spooky #body #feet {
     position: absolute;
     display: flex;
@@ -104,7 +92,6 @@ body {
     width: 180px;
     height: 36px;
 }
-
 #spooky #body #feet > *,
 #spooky #body #feet::before,
 #spooky #body #feet::after {
@@ -114,7 +101,6 @@ body {
     background: #f2fbf1;
     border-radius: 50%;
 }
-
 #shadow {
     margin: -90px auto 0;
     background: #252c49;
@@ -123,17 +109,14 @@ body {
     border-radius: 50%;
     animation: zoomy 2s infinite;
 }
-
 @keyframes floaty {
     0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-20px);
     }
 }
-
 @keyframes zoomy {
     0%, 100% {
         transform: scale(1);
