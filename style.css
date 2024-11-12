@@ -1,3 +1,4 @@
+/* Center body content, set full viewport size, and apply background color */
 body {
     overflow: hidden;
     height: 100vh;
@@ -8,6 +9,8 @@ body {
     margin: 0;
     background: #424f6f;
 }
+
+/* Container for the spooky ghost figure */
 #container {
     width: 400px;
     height: 400px;
@@ -15,16 +18,22 @@ body {
     box-sizing: border-box;
     background: #424f6f;
 }
+
+/* Inherit box-sizing for all elements */
 *:after,
 *:before {
     box-sizing: inherit;
 }
+
+/* Ghost element with floating animation */
 #spooky {
     margin: 10% auto;
     width: 80%;
     height: 80%;
     animation: floaty 2s infinite;
 }
+
+/* Ghost body shape and color */
 #spooky #body {
     position: relative;
     margin: 50px auto 0;
@@ -34,6 +43,8 @@ body {
     border-top-left-radius: 90px;
     border-top-right-radius: 90px;
 }
+
+/* Floating animation for ghost arms */
 #spooky #body:before,
 #spooky #body:after {
     content: '';
@@ -46,12 +57,16 @@ body {
     background: #e4c4fd;
     animation: floaty .2s infinite;
 }
+
 #spooky #body:before {
     left: -18px;
 }
+
 #spooky #body:after {
     right: -18px;
 }
+
+/* Ghost eyes styling */
 #spooky #body #eyes {
     display: flex;
     justify-content: space-between;
@@ -60,6 +75,7 @@ body {
     width: 90px;
     height: 20px;
 }
+
 #spooky #body #eyes:before,
 #spooky #body #eyes:after {
     content: ' ';
@@ -69,6 +85,8 @@ body {
     background: #252c49;
     border-radius: 50%;
 }
+
+/* Ghost mouth styling */
 #spooky #body #mouth {
     background: #252c49;
     margin: 25px auto 0;
@@ -77,6 +95,8 @@ body {
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+
+/* Detail inside ghost's mouth */
 #spooky #body #mouth:before {
     content: ' ';
     display: block;
@@ -85,6 +105,8 @@ body {
     width: 10px;
     height: 10px;
 }
+
+/* Ghost feet styling */
 #spooky #body #feet {
     position: absolute;
     display: flex;
@@ -92,6 +114,7 @@ body {
     width: 180px;
     height: 36px;
 }
+
 #spooky #body #feet > *,
 #spooky #body #feet::before,
 #spooky #body #feet::after {
@@ -101,6 +124,8 @@ body {
     background: #e4c4fd;
     border-radius: 50%;
 }
+
+/* Shadow animation for ghost */
 #shadow {
     margin: -90px auto 0;
     background: #252c49;
@@ -109,6 +134,8 @@ body {
     border-radius: 50%;
     animation: zoomy 2s infinite;
 }
+
+/* Floating animation for ghost body */
 @keyframes floaty {
     0%, 100% {
         transform: translateY(0);
@@ -117,6 +144,8 @@ body {
         transform: translateY(-20px);
     }
 }
+
+/* Shadow scaling effect */
 @keyframes zoomy {
     0%, 100% {
         transform: scale(1);
@@ -126,7 +155,7 @@ body {
     }
 }
 
+/* Infinite shake animation */
 .animate__animated.animate__shakeX {
     animation-iteration-count: infinite;
-  }
-
+}
